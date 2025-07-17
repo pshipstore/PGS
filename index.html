@@ -4,25 +4,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pship Global Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
     body { background: #f9f9f9; color: #333; line-height: 1.6; }
-    header { background: #1f1f1f; color: white; padding: 40px 20px; text-align: center; }
-    header h1 { font-size: 2.5rem; }
-    header p { margin-top: 10px; font-size: 1.1rem; color: #ccc; }
-    .btn { display: inline-block; margin-top: 20px; padding: 12px 24px; background: #00b894; color: white; text-decoration: none; border-radius: 5px; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    .section-title { font-size: 1.8rem; margin-bottom: 20px; color: #222; }
+    header { background: linear-gradient(to right, #1f1f1f, #333); color: white; padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 3rem; }
+    header p { margin-top: 10px; font-size: 1.2rem; color: #ccc; }
+    .btn { display: inline-block; margin-top: 20px; padding: 12px 24px; background: #00b894; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .section-title { font-size: 2rem; margin-bottom: 20px; color: #222; }
     .about img { max-width: 150px; border-radius: 100px; margin-bottom: 20px; }
     .skills ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-left: 0; }
     .portfolio-slider { position: relative; overflow: hidden; }
     .portfolio-slider img { width: 100%; max-width: 100%; border-radius: 10px; display: none; }
     .portfolio-slider img.active { display: block; }
     .gifts-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    .gifts-table th, .gifts-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    .gifts-table th, .gifts-table td { border: 1px solid #ddd; padding: 12px 14px; text-align: left; vertical-align: top; }
     .gifts-table th { background-color: #f2f2f2; }
+    .gift-icon { margin-right: 10px; color: #00b894; }
     footer { text-align: center; padding: 30px 20px; background: #1f1f1f; color: white; }
     .contact a { color: #00b894; text-decoration: none; display: inline-block; margin-top: 10px; }
+    .note { font-size: 0.95rem; color: #555; margin-top: 10px; }
   </style>
   <script>
     let currentSlide = 0;
@@ -74,32 +77,49 @@
       </thead>
       <tbody>
         <tr>
-          <td>Birthday Packages</td>
-          <td>Cakes, Champagne, Balloons, Personal Notes</td>
+          <td><i class="fas fa-ring gift-icon"></i>Ring</td>
+          <td>Random selection of stylish rings for special occasions. <br>Prices may vary based on the quality and design you prefer.</td>
         </tr>
         <tr>
-          <td>Flower Bouquets</td>
-          <td>Freshly arranged flowers with custom cards</td>
+          <td><i class="fas fa-paw gift-icon"></i>Teddy</td>
+          <td>Includes bears, bunnies, and other adorable plush teddies. <br>Sizes may vary depending on customer preference.</td>
         </tr>
         <tr>
-          <td>Food Hampers</td>
-          <td>Includes snacks, chocolates, groceries, fruits</td>
+          <td><i class="fas fa-seedling gift-icon"></i>Flowers</td>
+          <td>Artificial (weekly delivery) & Fresh (same-day delivery with card). <br>Prices vary based on quantity and type.</td>
         </tr>
         <tr>
-          <td>Fashion Items & Perfumes</td>
-          <td>Clothing, shoes, branded scents and accessories</td>
+          <td><i class="fas fa-car gift-icon"></i>Car Keys</td>
+          <td>Symbolic keys or actual car keys depending on surprise packages. <br>Price depends on car model or arrangement.</td>
         </tr>
         <tr>
-          <td>Surprise Packages</td>
-          <td>Trunk box surprises, romantic setups, proposal kits</td>
+          <td><i class="fas fa-bag-shopping gift-icon"></i>Bags</td>
+          <td>Luxury and everyday bags. Styles vary from designer to casual. <br>Price based on brand and quality.</td>
         </tr>
         <tr>
-          <td>Corporate Gifting</td>
-          <td>Branded gifts for staff, clients, and events</td>
+          <td><i class="fas fa-moon gift-icon"></i>Night Gown & PJs</td>
+          <td>Comfortable night wears in various sizes and designs. <br>Perfect for romantic or personal gifts.</td>
+        </tr>
+        <tr>
+          <td><i class="fas fa-credit-card gift-icon"></i>Fan & Credit Cards</td>
+          <td>Electronic fans and novelty/gift credit cards for special reveals. <br>Includes packaging options.</td>
+        </tr>
+        <tr>
+          <td><i class="fas fa-stopwatch gift-icon"></i>Watches</td>
+          <td>Branded and custom watches. <br>Prices vary based on quality and origin.</td>
+        </tr>
+        <tr>
+          <td><i class="fas fa-mug-hot gift-icon"></i>Customized Items</td>
+          <td>Mugs, caps, t-shirts, bedsheets and more. <br>Includes personal names, quotes or photos.</td>
+        </tr>
+        <tr>
+          <td><i class="fas fa-coins gift-icon"></i>Gold Bars</td>
+          <td>Pure gold bars for luxury gifting. <br>Prices vary based on weight (grams).</td>
         </tr>
       </tbody>
     </table>
-    <p>All orders are handled with top professionalism and real-time updates. Let’s help you deliver joy and smiles worldwide.</p>
+    <p class="note">📦 <strong>Note:</strong> Prices may vary depending on quality, customization, and the destination country for delivery.</p>
+    <p><a href="https://wa.me/234XXXXXXXXXX" class="btn">📋 View More in Catalog</a></p>
   </section>  <section class="contact">
     <h2 class="section-title">Let’s Work Together</h2>
     <p>Interested in working with me or placing a gift order? Let’s connect directly on WhatsApp or through my socials.</p>
