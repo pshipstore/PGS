@@ -15,10 +15,28 @@
     .section-title { font-size: 1.8rem; margin-bottom: 20px; color: #222; }
     .about img { max-width: 150px; border-radius: 100px; margin-bottom: 20px; }
     .skills ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-left: 0; }
-    .portfolio img { width: 100%; max-width: 100%; margin-bottom: 20px; border-radius: 10px; }
+    .portfolio-slider { position: relative; overflow: hidden; }
+    .portfolio-slider img { width: 100%; max-width: 100%; border-radius: 10px; display: none; }
+    .portfolio-slider img.active { display: block; }
+    .gifts-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .gifts-table th, .gifts-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    .gifts-table th { background-color: #f2f2f2; }
     footer { text-align: center; padding: 30px 20px; background: #1f1f1f; color: white; }
     .contact a { color: #00b894; text-decoration: none; display: inline-block; margin-top: 10px; }
   </style>
+  <script>
+    let currentSlide = 0;
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.portfolio-slider img');
+      slides.forEach((img, i) => img.classList.toggle('active', i === index));
+    }
+    setInterval(() => {
+      const slides = document.querySelectorAll('.portfolio-slider img');
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000);
+    window.onload = () => showSlide(currentSlide);
+  </script>
 </head>
 <body>
   <header>
@@ -39,20 +57,48 @@
     </ul>
   </section>  <section class="portfolio">
     <h2 class="section-title">Project Samples</h2>
-    <img src="https://via.placeholder.com/600x400" alt="Project 1" />
-    <img src="https://via.placeholder.com/600x400" alt="Project 2" />
+    <div class="portfolio-slider">
+      <img src="https://via.placeholder.com/600x400" alt="Project 1" class="active" />
+      <img src="https://via.placeholder.com/600x400/eeeeee" alt="Project 2" />
+      <img src="https://via.placeholder.com/600x400/dddddd" alt="Project 3" />
+    </div>
   </section>  <section class="gifts">
     <h2 class="section-title">Gift Delivery Services</h2>
     <p>We specialize in delivering heartfelt gifts around the world — right from Nigeria to your loved ones anywhere. Whether it's for birthdays, anniversaries, surprise packages, or corporate gifting, we’ve got you covered.</p>
-    <p><strong>Popular Gift Types We Deliver:</strong></p>
-    <ul>
-      <li>🎁 Birthday Packages (Cakes, Champagne, Balloons)</li>
-      <li>💐 Flower Bouquets & Custom Cards</li>
-      <li>🧺 Food Hampers (Snacks, Chocolates, Fruits, Groceries)</li>
-      <li>🛍️ Fashion Items & Perfumes</li>
-      <li>🎂 Surprise Trunk Boxes & Proposal Packages</li>
-      <li>📦 Custom Branded Gifts for Corporate Clients</li>
-    </ul>
+    <table class="gifts-table">
+      <thead>
+        <tr>
+          <th>Gift Category</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Birthday Packages</td>
+          <td>Cakes, Champagne, Balloons, Personal Notes</td>
+        </tr>
+        <tr>
+          <td>Flower Bouquets</td>
+          <td>Freshly arranged flowers with custom cards</td>
+        </tr>
+        <tr>
+          <td>Food Hampers</td>
+          <td>Includes snacks, chocolates, groceries, fruits</td>
+        </tr>
+        <tr>
+          <td>Fashion Items & Perfumes</td>
+          <td>Clothing, shoes, branded scents and accessories</td>
+        </tr>
+        <tr>
+          <td>Surprise Packages</td>
+          <td>Trunk box surprises, romantic setups, proposal kits</td>
+        </tr>
+        <tr>
+          <td>Corporate Gifting</td>
+          <td>Branded gifts for staff, clients, and events</td>
+        </tr>
+      </tbody>
+    </table>
     <p>All orders are handled with top professionalism and real-time updates. Let’s help you deliver joy and smiles worldwide.</p>
   </section>  <section class="contact">
     <h2 class="section-title">Let’s Work Together</h2>
